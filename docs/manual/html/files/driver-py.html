@@ -10,106 +10,118 @@
 
 <script type="text/javascript">var q = window.location.search;if (q.startsWith("?Theme=")){var t = q.slice(7);var e = t.indexOf(";");if (e != -1){  t = t.slice(0, e);  }document.documentElement.classList.add(t + "Theme")}</script>
 
-<a name="driver.py"></a><a name="Topic30"></a><div class="CTopic TFile LPython first">
+<a name="driver.py"></a><a name="Topic70"></a><div class="CTopic TFile LPython first">
  <div class="CTitle">driver.py</div>
 </div>
 
-<a name="Authors"></a><a name="Topic31"></a><div class="CTopic TGroup LPython">
+<a name="Authors"></a><a name="Topic71"></a><div class="CTopic TGroup LPython">
  <div class="CTitle">Authors</div>
 </div>
 
-<a name="JAY_CONVERTINO"></a><a name="Topic32"></a><div class="CTopic TAuthor LPython">
+<a name="JAY_CONVERTINO"></a><a name="Topic72"></a><div class="CTopic TAuthor LPython">
  <div class="CTitle">JAY CONVERTINO</div>
 </div>
 
-<a name="Dates"></a><a name="Topic33"></a><div class="CTopic TGroup LPython">
+<a name="Dates"></a><a name="Topic73"></a><div class="CTopic TGroup LPython">
  <div class="CTitle">Dates</div>
 </div>
 
-<a name="2025/03/11"></a><a name="Topic34"></a><div class="CTopic TDate LPython">
+<a name="2025/03/11"></a><a name="Topic74"></a><div class="CTopic TDate LPython">
  <div class="CTitle">2025/03/11</div>
 </div>
 
-<a name="Information"></a><a name="Topic35"></a><div class="CTopic TGroup LPython">
+<a name="Information"></a><a name="Topic75"></a><div class="CTopic TGroup LPython">
  <div class="CTitle">Information</div>
 </div>
 
-<a name="Brief"></a><a name="Topic99"></a><div class="CTopic TInformation LPython">
+<a name="Brief"></a><a name="Topic76"></a><div class="CTopic TInformation LPython">
  <div class="CTitle">Brief</div>
- <div class="CBody"><p>Bus Driver for APB3</p></div>
+ <div class="CBody"><p>Bus Driver for Analog Devices uP</p></div>
 </div>
 
-<a name="License_MIT"></a><a name="Topic37"></a><div class="CTopic TInformation LPython">
+<a name="License_MIT"></a><a name="Topic77"></a><div class="CTopic TInformation LPython">
  <div class="CTitle">License MIT</div>
  <div class="CBody"><p>Copyright 2025 Jay Convertino</p><p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &quot;Software&quot;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p><p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p><p>THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p></div>
 </div>
 
-<a name="apb3Master"></a><a name="Topic38"></a><div class="CTopic TClass LPython">
- <div class="CTitle">apb3Master</div>
- <div class="NDClassPrototype HasParents" id="NDClassPrototype38"><a class="CPEntry Parent TClass" href="../index.html#File:absbus.py:apb3Base" target="_top" onmouseover="NDContentPage.OnLinkMouseOver(event,24);" onmouseout="NDContentPage.OnLinkMouseOut(event);" ><div class="CPName">apb3Base</div></a><div class="CPEntry TClass Current"><div class="CPName">apb3Master</div></div></div>
- <div class="CBody"><p>Drive slave devices over the APB3 bus</p></div>
+<a name="upMaster"></a><a name="Topic78"></a><div class="CTopic TClass LPython">
+ <div class="CTitle">upMaster</div>
+ <div class="NDClassPrototype HasParents" id="NDClassPrototype78"><a class="CPEntry Parent TClass" href="../index.html#File:absbus.py:upBase" target="_top" onmouseover="NDContentPage.OnLinkMouseOver(event,28);" onmouseout="NDContentPage.OnLinkMouseOut(event);" ><div class="CPName">upBase</div></a><div class="CPEntry TClass Current"><div class="CPName">upMaster</div></div></div>
+ <div class="CBody"><p>Drive slave devices over the uP bus</p></div>
 </div>
 
-<a name="apb3Master.Functions"></a><a name="Topic39"></a><div class="CTopic TGroup LPython">
+<a name="upMaster.Functions"></a><a name="Topic79"></a><div class="CTopic TGroup LPython">
  <div class="CTitle">Functions</div>
 </div>
 
-<a name="apb3Master.__init__"></a><a name="Topic40"></a><div class="CTopic TFunction LPython">
+<a name="upMaster.__init__"></a><a name="Topic80"></a><div class="CTopic TFunction LPython">
  <div class="CTitle">__init__</div>
- <div id="NDPrototype40" class="NDPrototype WideForm"><div class="PSection PParameterSection PascalStyle"><div class="PParameterCells" data-WideColumnCount="4" data-NarrowColumnCount="3"><div class="PBeforeParameters" data-WideGridArea="1/1/8/2" data-NarrowGridArea="1/1/2/4" style="grid-area:1/1/8/2"><span class="SHKeyword">def</span> __init__(</div><div class="PName InLastParameterColumn" data-WideGridArea="1/3/2/4" data-NarrowGridArea="2/2/3/3" style="grid-area:1/3/2/4">self,</div><div class="PName InLastParameterColumn" data-WideGridArea="2/3/3/4" data-NarrowGridArea="3/2/4/3" style="grid-area:2/3/3/4">entity,</div><div class="PName InLastParameterColumn" data-WideGridArea="3/3/4/4" data-NarrowGridArea="4/2/5/3" style="grid-area:3/3/4/4">name,</div><div class="PName InLastParameterColumn" data-WideGridArea="4/3/5/4" data-NarrowGridArea="5/2/6/3" style="grid-area:4/3/5/4">clock,</div><div class="PName InLastParameterColumn" data-WideGridArea="5/3/6/4" data-NarrowGridArea="6/2/7/3" style="grid-area:5/3/6/4">resetn,</div><div class="PModifierQualifier InFirstParameterColumn" data-WideGridArea="6/2/7/3" data-NarrowGridArea="7/1/8/2" style="grid-area:6/2/7/3">*</div><div class="PName InLastParameterColumn" data-WideGridArea="6/3/7/4" data-NarrowGridArea="7/2/8/3" style="grid-area:6/3/7/4">args,</div><div class="PModifierQualifier InFirstParameterColumn" data-WideGridArea="7/2/8/3" data-NarrowGridArea="8/1/9/2" style="grid-area:7/2/8/3">**</div><div class="PName InLastParameterColumn" data-WideGridArea="7/3/8/4" data-NarrowGridArea="8/2/9/3" style="grid-area:7/3/8/4">kwargs</div><div class="PAfterParameters NegativeLeftSpaceOnWide" data-WideGridArea="7/4/8/5" data-NarrowGridArea="9/1/10/4" style="grid-area:7/4/8/5">)</div></div></div></div>
+ <div id="NDPrototype80" class="NDPrototype WideForm"><div class="PSection PParameterSection PascalStyle"><div class="PParameterCells" data-WideColumnCount="4" data-NarrowColumnCount="3"><div class="PBeforeParameters" data-WideGridArea="1/1/8/2" data-NarrowGridArea="1/1/2/4" style="grid-area:1/1/8/2"><span class="SHKeyword">def</span> __init__(</div><div class="PName InLastParameterColumn" data-WideGridArea="1/3/2/4" data-NarrowGridArea="2/2/3/3" style="grid-area:1/3/2/4">self,</div><div class="PName InLastParameterColumn" data-WideGridArea="2/3/3/4" data-NarrowGridArea="3/2/4/3" style="grid-area:2/3/3/4">entity,</div><div class="PName InLastParameterColumn" data-WideGridArea="3/3/4/4" data-NarrowGridArea="4/2/5/3" style="grid-area:3/3/4/4">name,</div><div class="PName InLastParameterColumn" data-WideGridArea="4/3/5/4" data-NarrowGridArea="5/2/6/3" style="grid-area:4/3/5/4">clock,</div><div class="PName InLastParameterColumn" data-WideGridArea="5/3/6/4" data-NarrowGridArea="6/2/7/3" style="grid-area:5/3/6/4">resetn,</div><div class="PModifierQualifier InFirstParameterColumn" data-WideGridArea="6/2/7/3" data-NarrowGridArea="7/1/8/2" style="grid-area:6/2/7/3">*</div><div class="PName InLastParameterColumn" data-WideGridArea="6/3/7/4" data-NarrowGridArea="7/2/8/3" style="grid-area:6/3/7/4">args,</div><div class="PModifierQualifier InFirstParameterColumn" data-WideGridArea="7/2/8/3" data-NarrowGridArea="8/1/9/2" style="grid-area:7/2/8/3">**</div><div class="PName InLastParameterColumn" data-WideGridArea="7/3/8/4" data-NarrowGridArea="8/2/9/3" style="grid-area:7/3/8/4">kwargs</div><div class="PAfterParameters NegativeLeftSpaceOnWide" data-WideGridArea="7/4/8/5" data-NarrowGridArea="9/1/10/4" style="grid-area:7/4/8/5">)</div></div></div></div>
  <div class="CBody"><p>Setup defaults and call base class constructor.</p></div>
 </div>
 
-<a name="apb3Master.read"></a><a name="Topic41"></a><div class="CTopic TFunction LPython">
+<a name="upMaster.read"></a><a name="Topic81"></a><div class="CTopic TFunction LPython">
  <div class="CTitle">read</div>
- <div id="NDPrototype41" class="NDPrototype WideForm"><div class="PSection PParameterSection PascalStyle"><div class="PParameterCells" data-WideColumnCount="3" data-NarrowColumnCount="2"><div class="PBeforeParameters" data-WideGridArea="1/1/3/2" data-NarrowGridArea="1/1/2/3" style="grid-area:1/1/3/2"><span class="SHKeyword">async def</span> read(</div><div class="PName InFirstParameterColumn InLastParameterColumn" data-WideGridArea="1/2/2/3" data-NarrowGridArea="2/1/3/2" style="grid-area:1/2/2/3">self,</div><div class="PName InFirstParameterColumn InLastParameterColumn" data-WideGridArea="2/2/3/3" data-NarrowGridArea="3/1/4/2" style="grid-area:2/2/3/3">address</div><div class="PAfterParameters" data-WideGridArea="2/3/3/4" data-NarrowGridArea="4/1/5/3" style="grid-area:2/3/3/4">)</div></div></div></div>
+ <div id="NDPrototype81" class="NDPrototype WideForm"><div class="PSection PParameterSection PascalStyle"><div class="PParameterCells" data-WideColumnCount="3" data-NarrowColumnCount="2"><div class="PBeforeParameters" data-WideGridArea="1/1/3/2" data-NarrowGridArea="1/1/2/3" style="grid-area:1/1/3/2"><span class="SHKeyword">async def</span> read(</div><div class="PName InFirstParameterColumn InLastParameterColumn" data-WideGridArea="1/2/2/3" data-NarrowGridArea="2/1/3/2" style="grid-area:1/2/2/3">self,</div><div class="PName InFirstParameterColumn InLastParameterColumn" data-WideGridArea="2/2/3/3" data-NarrowGridArea="3/1/4/2" style="grid-area:2/2/3/3">address</div><div class="PAfterParameters" data-WideGridArea="2/3/3/4" data-NarrowGridArea="4/1/5/3" style="grid-area:2/3/3/4">)</div></div></div></div>
  <div class="CBody"><p>Read from a address and return data</p></div>
 </div>
 
-<a name="apb3Master.write"></a><a name="Topic42"></a><div class="CTopic TFunction LPython">
+<a name="upMaster.write"></a><a name="Topic82"></a><div class="CTopic TFunction LPython">
  <div class="CTitle">write</div>
- <div id="NDPrototype42" class="NDPrototype WideForm"><div class="PSection PParameterSection PascalStyle"><div class="PParameterCells" data-WideColumnCount="3" data-NarrowColumnCount="2"><div class="PBeforeParameters" data-WideGridArea="1/1/4/2" data-NarrowGridArea="1/1/2/3" style="grid-area:1/1/4/2"><span class="SHKeyword">async def</span> write(</div><div class="PName InFirstParameterColumn InLastParameterColumn" data-WideGridArea="1/2/2/3" data-NarrowGridArea="2/1/3/2" style="grid-area:1/2/2/3">self,</div><div class="PName InFirstParameterColumn InLastParameterColumn" data-WideGridArea="2/2/3/3" data-NarrowGridArea="3/1/4/2" style="grid-area:2/2/3/3">address,</div><div class="PName InFirstParameterColumn InLastParameterColumn" data-WideGridArea="3/2/4/3" data-NarrowGridArea="4/1/5/2" style="grid-area:3/2/4/3">data</div><div class="PAfterParameters NegativeLeftSpaceOnWide" data-WideGridArea="3/3/4/4" data-NarrowGridArea="5/1/6/3" style="grid-area:3/3/4/4">)</div></div></div></div>
+ <div id="NDPrototype82" class="NDPrototype WideForm"><div class="PSection PParameterSection PascalStyle"><div class="PParameterCells" data-WideColumnCount="3" data-NarrowColumnCount="2"><div class="PBeforeParameters" data-WideGridArea="1/1/4/2" data-NarrowGridArea="1/1/2/3" style="grid-area:1/1/4/2"><span class="SHKeyword">async def</span> write(</div><div class="PName InFirstParameterColumn InLastParameterColumn" data-WideGridArea="1/2/2/3" data-NarrowGridArea="2/1/3/2" style="grid-area:1/2/2/3">self,</div><div class="PName InFirstParameterColumn InLastParameterColumn" data-WideGridArea="2/2/3/3" data-NarrowGridArea="3/1/4/2" style="grid-area:2/2/3/3">address,</div><div class="PName InFirstParameterColumn InLastParameterColumn" data-WideGridArea="3/2/4/3" data-NarrowGridArea="4/1/5/2" style="grid-area:3/2/4/3">data</div><div class="PAfterParameters NegativeLeftSpaceOnWide" data-WideGridArea="3/3/4/4" data-NarrowGridArea="5/1/6/3" style="grid-area:3/3/4/4">)</div></div></div></div>
  <div class="CBody"><p>Write to a address some data</p></div>
 </div>
 
-<a name="apb3Master._check_type"></a><a name="Topic43"></a><div class="CTopic TFunction LPython">
+<a name="upMaster._check_type"></a><a name="Topic83"></a><div class="CTopic TFunction LPython">
  <div class="CTitle">_check_type</div>
- <div id="NDPrototype43" class="NDPrototype WideForm"><div class="PSection PParameterSection PascalStyle"><div class="PParameterCells" data-WideColumnCount="3" data-NarrowColumnCount="2"><div class="PBeforeParameters" data-WideGridArea="1/1/3/2" data-NarrowGridArea="1/1/2/3" style="grid-area:1/1/3/2"><span class="SHKeyword">def</span> _check_type(</div><div class="PName InFirstParameterColumn InLastParameterColumn" data-WideGridArea="1/2/2/3" data-NarrowGridArea="2/1/3/2" style="grid-area:1/2/2/3">self,</div><div class="PName InFirstParameterColumn InLastParameterColumn" data-WideGridArea="2/2/3/3" data-NarrowGridArea="3/1/4/2" style="grid-area:2/2/3/3">trans</div><div class="PAfterParameters" data-WideGridArea="2/3/3/4" data-NarrowGridArea="4/1/5/3" style="grid-area:2/3/3/4">)</div></div></div></div>
+ <div id="NDPrototype83" class="NDPrototype WideForm"><div class="PSection PParameterSection PascalStyle"><div class="PParameterCells" data-WideColumnCount="3" data-NarrowColumnCount="2"><div class="PBeforeParameters" data-WideGridArea="1/1/3/2" data-NarrowGridArea="1/1/2/3" style="grid-area:1/1/3/2"><span class="SHKeyword">def</span> _check_type(</div><div class="PName InFirstParameterColumn InLastParameterColumn" data-WideGridArea="1/2/2/3" data-NarrowGridArea="2/1/3/2" style="grid-area:1/2/2/3">self,</div><div class="PName InFirstParameterColumn InLastParameterColumn" data-WideGridArea="2/2/3/3" data-NarrowGridArea="3/1/4/2" style="grid-area:2/2/3/3">trans</div><div class="PAfterParameters" data-WideGridArea="2/3/3/4" data-NarrowGridArea="4/1/5/3" style="grid-area:2/3/3/4">)</div></div></div></div>
  <div class="CBody"><p>Check and make sure we are only sending 2 bytes at a time and that it is a bytes/bytearray</p></div>
 </div>
 
-<a name="apb3Master._run"></a><a name="Topic44"></a><div class="CTopic TFunction LPython">
- <div class="CTitle">_run</div>
- <div id="NDPrototype44" class="NDPrototype WideForm"><div class="PSection PParameterSection PascalStyle"><div class="PParameterCells" data-WideColumnCount="3" data-NarrowColumnCount="2"><div class="PBeforeParameters" data-WideGridArea="1/1/2/2" data-NarrowGridArea="1/1/2/3" style="grid-area:1/1/2/2"><span class="SHKeyword">async def</span> _run(</div><div class="PName InFirstParameterColumn InLastParameterColumn" data-WideGridArea="1/2/2/3" data-NarrowGridArea="2/1/3/2" style="grid-area:1/2/2/3">self</div><div class="PAfterParameters" data-WideGridArea="1/3/2/4" data-NarrowGridArea="3/1/4/3" style="grid-area:1/3/2/4">)</div></div></div></div>
- <div class="CBody"><p>_run thread that deals with read and write queues.</p></div>
+<a name="upMaster._run_write"></a><a name="Topic84"></a><div class="CTopic TFunction LPython">
+ <div class="CTitle">_run_write</div>
+ <div id="NDPrototype84" class="NDPrototype WideForm"><div class="PSection PParameterSection PascalStyle"><div class="PParameterCells" data-WideColumnCount="3" data-NarrowColumnCount="2"><div class="PBeforeParameters" data-WideGridArea="1/1/2/2" data-NarrowGridArea="1/1/2/3" style="grid-area:1/1/2/2"><span class="SHKeyword">async def</span> _run_write(</div><div class="PName InFirstParameterColumn InLastParameterColumn" data-WideGridArea="1/2/2/3" data-NarrowGridArea="2/1/3/2" style="grid-area:1/2/2/3">self</div><div class="PAfterParameters" data-WideGridArea="1/3/2/4" data-NarrowGridArea="3/1/4/3" style="grid-area:1/3/2/4">)</div></div></div></div>
+ <div class="CBody"><p>method for write thread</p></div>
 </div>
 
-<a name="apb3EchoSlave"></a><a name="Topic45"></a><div class="CTopic TClass LPython">
- <div class="CTitle">apb3EchoSlave</div>
- <div class="NDClassPrototype HasParents" id="NDClassPrototype45"><a class="CPEntry Parent TClass" href="../index.html#File:absbus.py:apb3Base" target="_top" onmouseover="NDContentPage.OnLinkMouseOver(event,24);" onmouseout="NDContentPage.OnLinkMouseOut(event);" ><div class="CPName">apb3Base</div></a><div class="CPEntry TClass Current"><div class="CPName">apb3EchoSlave</div></div></div>
+<a name="upMaster._run_read"></a><a name="Topic85"></a><div class="CTopic TFunction LPython">
+ <div class="CTitle">_run_read</div>
+ <div id="NDPrototype85" class="NDPrototype WideForm"><div class="PSection PParameterSection PascalStyle"><div class="PParameterCells" data-WideColumnCount="3" data-NarrowColumnCount="2"><div class="PBeforeParameters" data-WideGridArea="1/1/2/2" data-NarrowGridArea="1/1/2/3" style="grid-area:1/1/2/2"><span class="SHKeyword">async def</span> _run_read(</div><div class="PName InFirstParameterColumn InLastParameterColumn" data-WideGridArea="1/2/2/3" data-NarrowGridArea="2/1/3/2" style="grid-area:1/2/2/3">self</div><div class="PAfterParameters" data-WideGridArea="1/3/2/4" data-NarrowGridArea="3/1/4/3" style="grid-area:1/3/2/4">)</div></div></div></div>
+ <div class="CBody"><p>method for read thread</p></div>
+</div>
+
+<a name="upEchoSlave"></a><a name="Topic86"></a><div class="CTopic TClass LPython">
+ <div class="CTitle">upEchoSlave</div>
+ <div class="NDClassPrototype HasParents" id="NDClassPrototype86"><a class="CPEntry Parent TClass" href="../index.html#File:absbus.py:upBase" target="_top" onmouseover="NDContentPage.OnLinkMouseOver(event,28);" onmouseout="NDContentPage.OnLinkMouseOut(event);" ><div class="CPName">upBase</div></a><div class="CPEntry TClass Current"><div class="CPName">upEchoSlave</div></div></div>
  <div class="CBody"><p>Respond to master reads and write by returning data, simple echo core.</p></div>
 </div>
 
-<a name="apb3EchoSlave.Functions"></a><a name="Topic46"></a><div class="CTopic TGroup LPython">
+<a name="upEchoSlave.Functions"></a><a name="Topic87"></a><div class="CTopic TGroup LPython">
  <div class="CTitle">Functions</div>
 </div>
 
-<a name="apb3EchoSlave.__init__"></a><a name="Topic47"></a><div class="CTopic TFunction LPython">
+<a name="upEchoSlave.__init__"></a><a name="Topic88"></a><div class="CTopic TFunction LPython">
  <div class="CTitle">__init__</div>
- <div id="NDPrototype47" class="NDPrototype WideForm"><div class="PSection PParameterSection PascalStyle"><div class="PParameterCells" data-WideColumnCount="6" data-NarrowColumnCount="5"><div class="PBeforeParameters" data-WideGridArea="1/1/9/2" data-NarrowGridArea="1/1/2/6" style="grid-area:1/1/9/2"><span class="SHKeyword">def</span> __init__(</div><div class="PName" data-WideGridArea="1/3/2/4" data-NarrowGridArea="2/2/3/3" style="grid-area:1/3/2/4">self,</div><div class="PName" data-WideGridArea="2/3/3/4" data-NarrowGridArea="3/2/4/3" style="grid-area:2/3/3/4">entity,</div><div class="PName" data-WideGridArea="3/3/4/4" data-NarrowGridArea="4/2/5/3" style="grid-area:3/3/4/4">name,</div><div class="PName" data-WideGridArea="4/3/5/4" data-NarrowGridArea="5/2/6/3" style="grid-area:4/3/5/4">clock,</div><div class="PName" data-WideGridArea="5/3/6/4" data-NarrowGridArea="6/2/7/3" style="grid-area:5/3/6/4">resetn,</div><div class="PName" data-WideGridArea="6/3/7/4" data-NarrowGridArea="7/2/8/3" style="grid-area:6/3/7/4">numreg</div><div class="PDefaultValueSeparator" data-WideGridArea="6/4/7/5" data-NarrowGridArea="7/3/8/4" style="grid-area:6/4/7/5">=&nbsp;</div><div class="PDefaultValue InLastParameterColumn" data-WideGridArea="6/5/7/6" data-NarrowGridArea="7/4/8/5" style="grid-area:6/5/7/6"><span class="SHNumber">256</span>,</div><div class="PModifierQualifier InFirstParameterColumn" data-WideGridArea="7/2/8/3" data-NarrowGridArea="8/1/9/2" style="grid-area:7/2/8/3">*</div><div class="PName" data-WideGridArea="7/3/8/4" data-NarrowGridArea="8/2/9/3" style="grid-area:7/3/8/4">args,</div><div class="PModifierQualifier InFirstParameterColumn" data-WideGridArea="8/2/9/3" data-NarrowGridArea="9/1/10/2" style="grid-area:8/2/9/3">**</div><div class="PName" data-WideGridArea="8/3/9/4" data-NarrowGridArea="9/2/10/3" style="grid-area:8/3/9/4">kwargs</div><div class="PAfterParameters NegativeLeftSpaceOnWide" data-WideGridArea="8/6/9/7" data-NarrowGridArea="10/1/11/6" style="grid-area:8/6/9/7">)</div></div></div></div>
+ <div id="NDPrototype88" class="NDPrototype WideForm"><div class="PSection PParameterSection PascalStyle"><div class="PParameterCells" data-WideColumnCount="6" data-NarrowColumnCount="5"><div class="PBeforeParameters" data-WideGridArea="1/1/9/2" data-NarrowGridArea="1/1/2/6" style="grid-area:1/1/9/2"><span class="SHKeyword">def</span> __init__(</div><div class="PName" data-WideGridArea="1/3/2/4" data-NarrowGridArea="2/2/3/3" style="grid-area:1/3/2/4">self,</div><div class="PName" data-WideGridArea="2/3/3/4" data-NarrowGridArea="3/2/4/3" style="grid-area:2/3/3/4">entity,</div><div class="PName" data-WideGridArea="3/3/4/4" data-NarrowGridArea="4/2/5/3" style="grid-area:3/3/4/4">name,</div><div class="PName" data-WideGridArea="4/3/5/4" data-NarrowGridArea="5/2/6/3" style="grid-area:4/3/5/4">clock,</div><div class="PName" data-WideGridArea="5/3/6/4" data-NarrowGridArea="6/2/7/3" style="grid-area:5/3/6/4">resetn,</div><div class="PName" data-WideGridArea="6/3/7/4" data-NarrowGridArea="7/2/8/3" style="grid-area:6/3/7/4">numreg</div><div class="PDefaultValueSeparator" data-WideGridArea="6/4/7/5" data-NarrowGridArea="7/3/8/4" style="grid-area:6/4/7/5">=&nbsp;</div><div class="PDefaultValue InLastParameterColumn" data-WideGridArea="6/5/7/6" data-NarrowGridArea="7/4/8/5" style="grid-area:6/5/7/6"><span class="SHNumber">256</span>,</div><div class="PModifierQualifier InFirstParameterColumn" data-WideGridArea="7/2/8/3" data-NarrowGridArea="8/1/9/2" style="grid-area:7/2/8/3">*</div><div class="PName" data-WideGridArea="7/3/8/4" data-NarrowGridArea="8/2/9/3" style="grid-area:7/3/8/4">args,</div><div class="PModifierQualifier InFirstParameterColumn" data-WideGridArea="8/2/9/3" data-NarrowGridArea="9/1/10/2" style="grid-area:8/2/9/3">**</div><div class="PName" data-WideGridArea="8/3/9/4" data-NarrowGridArea="9/2/10/3" style="grid-area:8/3/9/4">kwargs</div><div class="PAfterParameters NegativeLeftSpaceOnWide" data-WideGridArea="8/6/9/7" data-NarrowGridArea="10/1/11/6" style="grid-area:8/6/9/7">)</div></div></div></div>
  <div class="CBody"><p>Setup defaults and call base class constructor.</p></div>
 </div>
 
-<a name="apb3EchoSlave._check_type"></a><a name="Topic48"></a><div class="CTopic TFunction LPython">
+<a name="upEchoSlave._check_type"></a><a name="Topic89"></a><div class="CTopic TFunction LPython">
  <div class="CTitle">_check_type</div>
- <div id="NDPrototype48" class="NDPrototype WideForm"><div class="PSection PParameterSection PascalStyle"><div class="PParameterCells" data-WideColumnCount="3" data-NarrowColumnCount="2"><div class="PBeforeParameters" data-WideGridArea="1/1/3/2" data-NarrowGridArea="1/1/2/3" style="grid-area:1/1/3/2"><span class="SHKeyword">def</span> _check_type(</div><div class="PName InFirstParameterColumn InLastParameterColumn" data-WideGridArea="1/2/2/3" data-NarrowGridArea="2/1/3/2" style="grid-area:1/2/2/3">self,</div><div class="PName InFirstParameterColumn InLastParameterColumn" data-WideGridArea="2/2/3/3" data-NarrowGridArea="3/1/4/2" style="grid-area:2/2/3/3">trans</div><div class="PAfterParameters" data-WideGridArea="2/3/3/4" data-NarrowGridArea="4/1/5/3" style="grid-area:2/3/3/4">)</div></div></div></div>
- <div class="CBody"><p>Check and make sure we are only sending a type of apb3trans.</p></div>
+ <div id="NDPrototype89" class="NDPrototype WideForm"><div class="PSection PParameterSection PascalStyle"><div class="PParameterCells" data-WideColumnCount="3" data-NarrowColumnCount="2"><div class="PBeforeParameters" data-WideGridArea="1/1/3/2" data-NarrowGridArea="1/1/2/3" style="grid-area:1/1/3/2"><span class="SHKeyword">def</span> _check_type(</div><div class="PName InFirstParameterColumn InLastParameterColumn" data-WideGridArea="1/2/2/3" data-NarrowGridArea="2/1/3/2" style="grid-area:1/2/2/3">self,</div><div class="PName InFirstParameterColumn InLastParameterColumn" data-WideGridArea="2/2/3/3" data-NarrowGridArea="3/1/4/2" style="grid-area:2/2/3/3">trans</div><div class="PAfterParameters" data-WideGridArea="2/3/3/4" data-NarrowGridArea="4/1/5/3" style="grid-area:2/3/3/4">)</div></div></div></div>
+ <div class="CBody"><p>Check and make sure we are only sending a type of uptrans.</p></div>
 </div>
 
-<a name="apb3EchoSlave._run"></a><a name="Topic49"></a><div class="CTopic TFunction LPython last">
- <div class="CTitle">_run</div>
- <div id="NDPrototype49" class="NDPrototype WideForm"><div class="PSection PParameterSection PascalStyle"><div class="PParameterCells" data-WideColumnCount="3" data-NarrowColumnCount="2"><div class="PBeforeParameters" data-WideGridArea="1/1/2/2" data-NarrowGridArea="1/1/2/3" style="grid-area:1/1/2/2"><span class="SHKeyword">async def</span> _run(</div><div class="PName InFirstParameterColumn InLastParameterColumn" data-WideGridArea="1/2/2/3" data-NarrowGridArea="2/1/3/2" style="grid-area:1/2/2/3">self</div><div class="PAfterParameters" data-WideGridArea="1/3/2/4" data-NarrowGridArea="3/1/4/3" style="grid-area:1/3/2/4">)</div></div></div></div>
- <div class="CBody"><p>_run thread that deals with read and write request over bus.</p></div>
+<a name="upEchoSlave._run_write"></a><a name="Topic90"></a><div class="CTopic TFunction LPython">
+ <div class="CTitle">_run_write</div>
+ <div id="NDPrototype90" class="NDPrototype WideForm"><div class="PSection PParameterSection PascalStyle"><div class="PParameterCells" data-WideColumnCount="3" data-NarrowColumnCount="2"><div class="PBeforeParameters" data-WideGridArea="1/1/2/2" data-NarrowGridArea="1/1/2/3" style="grid-area:1/1/2/2"><span class="SHKeyword">async def</span> _run_write(</div><div class="PName InFirstParameterColumn InLastParameterColumn" data-WideGridArea="1/2/2/3" data-NarrowGridArea="2/1/3/2" style="grid-area:1/2/2/3">self</div><div class="PAfterParameters" data-WideGridArea="1/3/2/4" data-NarrowGridArea="3/1/4/3" style="grid-area:1/3/2/4">)</div></div></div></div>
+ <div class="CBody"><p>method for write thread</p></div>
+</div>
+
+<a name="upEchoSlave._run_read"></a><a name="Topic91"></a><div class="CTopic TFunction LPython last">
+ <div class="CTitle">_run_read</div>
+ <div id="NDPrototype91" class="NDPrototype WideForm"><div class="PSection PParameterSection PascalStyle"><div class="PParameterCells" data-WideColumnCount="3" data-NarrowColumnCount="2"><div class="PBeforeParameters" data-WideGridArea="1/1/2/2" data-NarrowGridArea="1/1/2/3" style="grid-area:1/1/2/2"><span class="SHKeyword">async def</span> _run_read(</div><div class="PName InFirstParameterColumn InLastParameterColumn" data-WideGridArea="1/2/2/3" data-NarrowGridArea="2/1/3/2" style="grid-area:1/2/2/3">self</div><div class="PAfterParameters" data-WideGridArea="1/3/2/4" data-NarrowGridArea="3/1/4/3" style="grid-area:1/3/2/4">)</div></div></div></div>
+ <div class="CBody"><p>method for read thread</p></div>
 </div>
 
 </body></html>

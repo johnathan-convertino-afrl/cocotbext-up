@@ -1,0 +1,1 @@
+﻿NDSummary.OnToolTipsLoaded("PythonClass:uptrans",{26:"<div class=\"NDToolTip TClass LPython\"><div class=\"NDClassPrototype\" id=\"NDClassPrototype26\"><div class=\"CPEntry TClass Current\"><div class=\"CPName\">uptrans</div></div></div><div class=\"TTSummary\">create an object that associates a data member and address for operation.</div></div>"});

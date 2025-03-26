@@ -1,1 +1,0 @@
-﻿NDFramePage.OnPageTitleLoaded("PythonClass:apb3trans","apb3trans");NDSummary.OnSummaryLoaded("PythonClass:apb3trans",[["Python","Python"]],[["Classes","Class"]],[[22,0,0,"apb3trans"]]);

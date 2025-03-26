@@ -1,1 +1,0 @@
-﻿NDFramePage.OnPageTitleLoaded("PythonClass:apbState","apbState");NDSummary.OnSummaryLoaded("PythonClass:apbState",[["Python","Python"]],[["Classes","Class"]],[[23,0,0,"apbState"]]);

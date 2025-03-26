@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("upe",["Class"],[["upEchoSlave",,[[,,,,0,"File:driver.py:upEchoSlave","PythonClass:upEchoSlave"]]]]);

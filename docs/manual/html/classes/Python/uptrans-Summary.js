@@ -1,0 +1,1 @@
+﻿NDFramePage.OnPageTitleLoaded("PythonClass:uptrans","uptrans");NDSummary.OnSummaryLoaded("PythonClass:uptrans",[["Python","Python"]],[["Classes","Class"]],[[26,0,0,"uptrans"]]);

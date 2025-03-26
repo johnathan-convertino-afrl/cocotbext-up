@@ -1,1 +1,1 @@
-﻿NDMenu.OnSectionLoaded("files.js",[[2,"cocotbext-apb","File3:",[[1,"busbase.py"]]],[2,"cocotbext-apb-three","File:",[[1,"__init__.py"],[1,"absbus.py"],[1,"driver.py"],[1,"monitor.py"]]],[2,"cocotbext-apb-three-tests","File2:",[[1,"test.py"],[1,"test.v"]]]]);
+﻿NDMenu.OnSectionLoaded("files.js",[[2,"cocotbext-up","File3:",[[1,"busbase.py"]]],[2,"cocotbext-up-ad","File:",[[1,"__init__.py"],[1,"absbus.py"],[1,"driver.py"],[1,"monitor.py"]]],[2,"cocotbext-up-ad-tests","File2:",[[1,"test.py"],[1,"test.v"]]]]);

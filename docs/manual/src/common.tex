@@ -1,7 +1,7 @@
 \begin{titlepage}
   \begin{center}
 
-  {\Huge cocotbext APB}
+  {\Huge cocotbext uP}
 
   \vspace{25mm}
 
@@ -27,7 +27,7 @@
 \subsection{Introduction}
 
 \par
-Cocotb extension to test APB3 bus master, and slave devices.
+Cocotb extension to test uP bus master, and slave devices.
 
 \subsection{Dependencies}
 
@@ -45,8 +45,8 @@ The following are the dependencies of the cores.
 Below is a simple example for reading and writing data from register zero in the cocotb extension.
 \begin{lstlisting}[language=Python]
 
-master  = apb3Master(dut, "apb", dut.clk, dut.rstn)
-slave = apb3EchoSlave(dut, "apb", dut.clk, dut.rstn)
+master  = upMaster(dut, "apb", dut.clk, dut.rstn)
+slave = upEchoSlave(dut, "apb", dut.clk, dut.rstn)
 
 await master.write(0, 0xAAAAAAAA)
 
@@ -61,12 +61,12 @@ assert 0xAAAAAAAA == rx_data, "RECEIVED DATA DOES NOT MATCH"
 Please see \ref{Code Documentation} for more information.
 
 \par
-apb3Master tests APB3 slave devices by executing read/write requests from the python test bench.
+upMaster tests uP slave devices by executing read/write requests from the python test bench.
 \par
-apb3EchoSlave provides a simple slave that will echo all register writes back over read when requested.
+upEchoSlave provides a simple slave that will echo all register writes back over read when requested.
 \par
-apb3Monitor tests to make sure signals are proper. Simple core at the moment, only checks for 0 at rest
-and if the penable is correct per pselect.
+upMonitor tests to make sure signals are proper. Simple core at the moment, only checks for 0 at rest
+and if the wack/rack is correct per wreq/rreq.
 
 \subsection{Directory Guide}
 
@@ -80,7 +80,7 @@ Below highlights important folders from the root of the directory.
     \end{itemize}
   \item \textbf{cocotbext} Contains source files for the extension
     \begin{itemize}
-      \item \textbf{apb.three} Contains source files for the APB version three extension.
+      \item \textbf{up.ad} Contains source files for the Analog Devices uP version of the bus.
     \end{itemize}
   \item \textbf{tests} Contains test files for cocotb
 \end{enumerate}
@@ -99,7 +99,7 @@ To use the cocotb tests you must install the following python libraries.
   $ pip install -e .
 \end{lstlisting}
 
-Then you must enter the tests folder and enter the mil-std-1553 folder. From there you may execute the following command
+Then you must enter the tests folder and enter the folder of the type you wish to test. From there you may execute the following command
 which will kick off the test.
 \begin{lstlisting}[language=bash]
   $ make

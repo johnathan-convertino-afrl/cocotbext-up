@@ -1,1 +1,0 @@
-﻿NDContentPage.OnToolTipsLoaded({24:"<div class=\"NDToolTip TClass LPython\"><div class=\"NDClassPrototype\" id=\"NDClassPrototype24\"><div class=\"CPEntry TClass Current\"><div class=\"CPName\">apb3Base</div></div></div><div class=\"TTSummary\">abstract base class that defines apb3 signals</div></div>"});

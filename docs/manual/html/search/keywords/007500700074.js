@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("upt",["Class"],[["uptrans",,[[,,,,0,"File:absbus.py:uptrans","PythonClass:uptrans"]]]]);

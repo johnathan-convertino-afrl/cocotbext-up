@@ -1,1 +1,1 @@
-﻿NDSearch.OnPrefixDataLoaded("_si",["Variable"],[["_signals",,[["apb3Base",,,,0,"File:absbus.py:apb3Base._signals","PythonClass:apb3Base:_signals"]]]]);
+﻿NDSearch.OnPrefixDataLoaded("_si",["Variable"],[["_signals",,[["upBase",,,,0,"File:absbus.py:upBase._signals","PythonClass:upBase:_signals"]]]]);

@@ -1,0 +1,1 @@
+﻿NDFramePage.OnPageTitleLoaded("PythonClass:upState","upState");NDSummary.OnSummaryLoaded("PythonClass:upState",[["Python","Python"]],[["Classes","Class"]],[[27,0,0,"upState"]]);

@@ -1,1 +1,1 @@
-﻿NDMenu.OnSectionLoaded("classes.js",[[1,"apb3Base"],[1,"apb3EchoSlave"],[1,"apb3Master"],[1,"apb3Monitor"],[1,"apb3trans"],[1,"apbState"],[1,"busbase"],[1,"TB"]]);
+﻿NDMenu.OnSectionLoaded("classes.js",[[1,"busbase"],[1,"TB"],[1,"upBase"],[1,"upEchoSlave"],[1,"upMaster"],[1,"upMonitor"],[1,"upState"],[1,"uptrans"]]);

@@ -1,1 +1,0 @@
-﻿NDFramePage.OnPageTitleLoaded("PythonClass:apb3Monitor","apb3Monitor");NDSummary.OnSummaryLoaded("PythonClass:apb3Monitor",[["Python","Python"]],[["Classes","Class"],["Functions","Function"],["Groups","Group"]],[[100,0,0,"apb3Monitor"],[101,0,2,"Functions","Functions"],[102,0,1,"__init__","__init__"],[103,0,1,"_check_type","_check_type"],[104,0,1,"_run","_run"]]);

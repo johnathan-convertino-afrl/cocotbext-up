@@ -1,1 +1,0 @@
-﻿NDSummary.OnToolTipsLoaded("PythonClass:apb3trans",{22:"<div class=\"NDToolTip TClass LPython\"><div class=\"NDClassPrototype\" id=\"NDClassPrototype22\"><div class=\"CPEntry TClass Current\"><div class=\"CPName\">apb3trans</div></div></div><div class=\"TTSummary\">create an object that associates a data member and address for operation.</div></div>"});

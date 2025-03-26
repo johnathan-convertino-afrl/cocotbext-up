@@ -1,1 +1,0 @@
-﻿NDFramePage.OnPageTitleLoaded("PythonClass:apb3EchoSlave","apb3EchoSlave");NDSummary.OnSummaryLoaded("PythonClass:apb3EchoSlave",[["Python","Python"]],[["Classes","Class"],["Functions","Function"],["Groups","Group"]],[[45,0,0,"apb3EchoSlave"],[46,0,2,"Functions","Functions"],[47,0,1,"__init__","__init__"],[48,0,1,"_check_type","_check_type"],[49,0,1,"_run","_run"]]);
