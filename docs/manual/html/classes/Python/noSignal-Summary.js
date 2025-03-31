@@ -1,0 +1,1 @@
+﻿NDFramePage.OnPageTitleLoaded("PythonClass:noSignal","noSignal");NDSummary.OnSummaryLoaded("PythonClass:noSignal",[["Python","Python"]],[["Classes","Class"]],[[18,0,0,"noSignal"]]);

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.1.27)  26 MAR 2025 14:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.1.27)  31 MAR 2025 12:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -302,8 +302,8 @@ Package pdftex.def Info: img/AFRL.png  used on input line 122.
 
 :tex2html_wrap163:lthtmlCropMarkDepth:=0.0pt:1ex:=4.30554pt
 Preview: Tightpage -32890 -32890 32890 32890
-[1 </home/convertinoj/Projects/PRIVATE/TODO/cocotbext-up/docs/manual/img/AFRL.p
-ng>] (./cocotbext_up_images.aux)
+[1 </home/convertinoj/Projects/PUBLIC/cocotbext-up/docs/manual/img/AFRL.png>] (
+./cocotbext_up_images.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
