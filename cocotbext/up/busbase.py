@@ -46,8 +46,16 @@ from abc import ABC
 
 from .version import __version__
 
+# Class: transaction
+# Abstract class for transaction types
 class transaction(ABC):
     pass
+
+# Class: noSignal
+# Class to use when a signal does not exist
+class noSignal:
+    def __init__(self, value = True):
+        self.value = value
 
 # Class: busbase
 # A busbase to transmit test routine.
@@ -167,9 +175,12 @@ class busbase:
         if(isinstance(trans, list)):
             temp = []
             for t in trans:
+                await self._queue_read(t)
+            for t in trans:
                 temp.append(await self._read(t))
             return temp
         else:
+            await self._queue_read(trans)
             return await self._read(trans)
 
 
@@ -180,11 +191,17 @@ class busbase:
             await self.wqueue.put(trans)
             await self._idle.wait()
 
+    # Function: _queue_read
+    # Setup queue for read requests
+    async def _queue_read(self, trans : transaction):
+        if(self._check_type(trans)):
+            await self.qqueue.put(trans)
+            await self._idle.wait()
+
     # Function: _read
     # Read dat one element at a time
     async def _read(self, trans : transaction):
         if(self._check_type(trans)):
-            await self.qqueue.put(trans)
             while self.read_empty():
                 self._idle.clear()
                 await self._idle.wait()
