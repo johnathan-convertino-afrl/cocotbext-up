@@ -94,10 +94,15 @@ class busbase:
         # Queue to store result of read requests
         self.rqueue = Queue()
 
-        # Variable: self._idle
-        # Event trigger for cocotb
-        self._idle = Event()
-        self._idle.set()
+        # Variable: _idle_read
+        # Event trigger for cocotb read
+        self._idle_read = Event()
+        self._idle_read.set()
+
+        # Variable: _idle_write
+        # Event trigger for cocotb write
+        self._idle_write = Event()
+        self._idle_write.set()
 
         # Variable: self._run_cr
         # Thread instance of _run method
@@ -148,10 +153,15 @@ class busbase:
         while not self.rqueue.empty():
             frame = self.rqueue.get_nowait()
 
-    # Function: wait
-    # Wait for the run thread to become idle.
-    async def wait(self):
-        await self._idle.wait()
+    # Function: wait_read
+    # Wait for the run thread to become idle from a read.
+    async def wait_read(self):
+        await self._idle_read.wait()
+
+    # Function: wait_write
+    # Wait for the run thread to become idle from a write.
+    async def wait_write(self):
+        await self._idle_write.wait()
 
     # Function: idle
     # Are all the queues empty and the _run is not active processing data.
@@ -166,8 +176,6 @@ class busbase:
                 await self._write(t)
         else:
             await self._write(trans)
-
-        self._idle.clear()
 
     # Function: read_trans
     # Read bus and output and tranaction.
@@ -189,22 +197,22 @@ class busbase:
     async def _write(self, trans : transaction):
         if(self._check_type(trans)):
             await self.wqueue.put(trans)
-            await self._idle.wait()
+            await self._idle_write.wait()
+            self._idle_write.clear()
 
     # Function: _queue_read
     # Setup queue for read requests
     async def _queue_read(self, trans : transaction):
         if(self._check_type(trans)):
             await self.qqueue.put(trans)
-            await self._idle.wait()
 
     # Function: _read
     # Read dat one element at a time
     async def _read(self, trans : transaction):
         if(self._check_type(trans)):
             while self.read_empty():
-                self._idle.clear()
-                await self._idle.wait()
+                self._idle_read.clear()
+                await self._idle_read.wait()
             return await self.rqueue.get()
 
     # Function: _check_type

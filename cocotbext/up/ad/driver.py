@@ -112,7 +112,7 @@ class upMaster(upBase):
           self.bus.wdata.value = trans.data
           self._upWriteStateMachine = upState.REQ
         else:
-          self._idle.set()
+          self._idle_write.set()
 
           self.bus.wreq.value = 0
           self.bus.waddr.value = 0
@@ -123,7 +123,7 @@ class upMaster(upBase):
           self.bus.waddr.value = 0
           self.bus.wdata.value = 0
           self._upWriteStateMachine = upState.IDLE
-          self._idle.set()
+          self._idle_write.set()
         elif(self.bus.wack.value):
           trans = await self.wqueue.get()
           self.bus.waddr.value = trans.address
@@ -135,7 +135,7 @@ class upMaster(upBase):
           self.bus.waddr.value = 0
           self.bus.wdata.value = 0
           self._upWriteStateMachine = upState.IDLE
-          self._idle.set()
+          self._idle_write.set()
         elif(self.bus.wack.value):
           trans = await self.wqueue.get()
           self.bus.waddr.value = trans.address
@@ -164,8 +164,7 @@ class upMaster(upBase):
           self.bus.raddr.value = trans.address
           self._upReadStateMachine = upState.REQ
         else:
-          self._idle.set()
-
+          self._idle_read.set()
           self.bus.rreq.value = 0
           self.bus.raddr.value = 0
       elif(self._upReadStateMachine == upState.REQ):
@@ -175,7 +174,8 @@ class upMaster(upBase):
           self.bus.rreq.value = 0
           self.bus.raddr.value = 0
           self._upReadStateMachine = upState.IDLE
-          self._idle.set()
+          self._idle_read.set()
+          self.log.info(f'_idle set 2 {trans.data}')
         elif(self.bus.rack.value):
           trans.data = self.bus.rdata.value
           await self.rqueue.put(trans)
@@ -188,7 +188,8 @@ class upMaster(upBase):
           self.bus.rreq.value = 0
           self.bus.raddr.value = 0
           self._upReadStateMachine = upState.IDLE
-          self._idle.set()
+          self._idle_read.set()
+          self.log.info(f'_idle set 3')
         elif(self.bus.rack.value):
           trans.data = self.bus.rdata.value
           await self.rqueue.put(trans)
@@ -246,7 +247,7 @@ class upEchoSlave(upBase):
         self._upWriteStateMachine = upState.ACK
       else:
         self.bus.wack.value = 0
-        self._idle.set()
+        self._idle_write.set()
         self._upReadStateMachine = upState.IDLE
 
 
@@ -266,5 +267,5 @@ class upEchoSlave(upBase):
         self._upReadStateMachine = upState.ACK
       else:
         self.bus.rack.value = 0
-        self._idle.set()
+        self._idle_read.set()
         self._upReadStateMachine = upState.IDLE
