@@ -175,7 +175,6 @@ class upMaster(upBase):
           self.bus.raddr.value = 0
           self._upReadStateMachine = upState.IDLE
           self._idle_read.set()
-          self.log.info(f'_idle set 2 {trans.data}')
         elif(self.bus.rack.value):
           trans.data = self.bus.rdata.value
           await self.rqueue.put(trans)
@@ -189,7 +188,6 @@ class upMaster(upBase):
           self.bus.raddr.value = 0
           self._upReadStateMachine = upState.IDLE
           self._idle_read.set()
-          self.log.info(f'_idle set 3')
         elif(self.bus.rack.value):
           trans.data = self.bus.rdata.value
           await self.rqueue.put(trans)
