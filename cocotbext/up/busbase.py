@@ -97,12 +97,12 @@ class busbase:
         # Variable: _idle_read
         # Event trigger for cocotb read
         self._idle_read = Event()
-        self._idle_read.set()
+        self._idle_read.clear()
 
         # Variable: _idle_write
         # Event trigger for cocotb write
         self._idle_write = Event()
-        self._idle_write.set()
+        self._idle_write.clear()
 
         # Variable: self._run_cr
         # Thread instance of _run method

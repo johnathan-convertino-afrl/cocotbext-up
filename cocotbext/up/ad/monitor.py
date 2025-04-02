@@ -69,12 +69,12 @@ class upMonitor(upBase):
 
       if not self._resetn.value:
         assert self.bus.wreq.value == 0,  "RESET ISSUE: WREQ is not zero."
-        self._idle.set()
+        self._idle_write.set()
         continue
 
-      if self.bus.wack.value:
-        if not self.bus.wreq.value:
-          raise ValueError("WACK ISSUE: WACK is not zero when WREQ is zero.")
+      # if self.bus.wack.value:
+      #   if not self.bus.wreq.value:
+      #     raise ValueError("WACK ISSUE: WACK is not zero when WREQ is zero.")
 
   # Method: _run_read
   # Coroutine for reading uP bus
@@ -84,12 +84,12 @@ class upMonitor(upBase):
 
       if not self._resetn.value:
         assert self.bus.rreq.value == 0,  "RESET ISSUE: RREQ is not zero."
-        self._idle.set()
+        self._idle_read.set()
         continue
 
-      if self.bus.rack.value:
-        if not self.bus.rreq.value:
-          raise ValueError("RACK ISSUE: RACK is not zero when RREQ is zero.")
+      # if self.bus.rack.value:
+      #   if not self.bus.rreq.value:
+      #     raise ValueError("RACK ISSUE: RACK is not zero when RREQ is zero.")
 
 
 

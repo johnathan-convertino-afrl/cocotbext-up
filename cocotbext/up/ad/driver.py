@@ -99,57 +99,46 @@ class upMaster(upBase):
   # Method: _run_write
   # method for write thread
   async def _run_write(self):
-    prevState = self._upWriteStateMachine
+    prevState = self._writeState
 
     while True:
       await RisingEdge(self.clock)
 
-      if(self._upWriteStateMachine == upState.IDLE):
+      if(self._writeState == upState.IDLE):
         if not self.wqueue.empty():
           trans = await self.wqueue.get()
           self.bus.wreq.value = 1
           self.bus.waddr.value = trans.address
           self.bus.wdata.value = trans.data
-          self._upWriteStateMachine = upState.REQ
+          self._writeState = upState.REQ
         else:
-          self._idle_write.set()
-
           self.bus.wreq.value = 0
           self.bus.waddr.value = 0
           self.bus.wdata.value = 0
-      elif(self._upWriteStateMachine == upState.REQ):
+      elif(self._writeState == upState.REQ):
         if(self.wqueue.empty() and self.bus.wack.value):
           self.bus.wreq.value = 0
           self.bus.waddr.value = 0
           self.bus.wdata.value = 0
-          self._upWriteStateMachine = upState.IDLE
+          self._writeState = upState.IDLE
           self._idle_write.set()
         elif(self.bus.wack.value):
           trans = await self.wqueue.get()
           self.bus.waddr.value = trans.address
           self.bus.wdata.value = trans.data
-          self._upWriteStateMachine = upState.ACK
-      elif(self._upWriteStateMachine == upState.ACK):
-        if(self.wqueue.empty() and self.bus.wack.value):
-          self.bus.wreq.value = 0
-          self.bus.waddr.value = 0
-          self.bus.wdata.value = 0
-          self._upWriteStateMachine = upState.IDLE
           self._idle_write.set()
-        elif(self.bus.wack.value):
-          trans = await self.wqueue.get()
-          self.bus.waddr.value = trans.address
-          self.bus.wdata.value = trans.data
+        else:
+          self.bus.wreq.value = 0
 
-      if(self._upWriteStateMachine != prevState):
-        self.log.info(f'uP MASTER STATE: {self._upWriteStateMachine.name} : BUS WRITE')
+      if(self._writeState != prevState):
+        self.log.info(f'uP MASTER STATE: {self._writeState.name} : BUS WRITE')
 
-      prevState = self._upWriteStateMachine
+      prevState = self._writeState
 
   # Method: _run_read
   # method for read thread
   async def _run_read(self):
-    prevState = self._upReadStateMachine
+    prevState = self._readState
 
     trans = None
 
@@ -157,46 +146,35 @@ class upMaster(upBase):
 
       await RisingEdge(self.clock)
 
-      if(self._upReadStateMachine == upState.IDLE):
+      if(self._readState == upState.IDLE):
         if not self.qqueue.empty():
           trans = await self.qqueue.get()
           self.bus.rreq.value = 1
           self.bus.raddr.value = trans.address
-          self._upReadStateMachine = upState.REQ
+          self._readState = upState.REQ
         else:
-          self._idle_read.set()
           self.bus.rreq.value = 0
           self.bus.raddr.value = 0
-      elif(self._upReadStateMachine == upState.REQ):
+      elif(self._readState == upState.REQ):
         if(self.qqueue.empty() and self.bus.rack.value):
           trans.data = self.bus.rdata.value
           await self.rqueue.put(trans)
           self.bus.rreq.value = 0
           self.bus.raddr.value = 0
-          self._upReadStateMachine = upState.IDLE
+          self._readState = upState.IDLE
           self._idle_read.set()
         elif(self.bus.rack.value):
           trans.data = self.bus.rdata.value
           await self.rqueue.put(trans)
           trans = await self.qqueue.get()
-          self._upReadStateMachine = upState.ACK
-      elif(self._upReadStateMachine == upState.ACK):
-        if(self.qqueue.empty() and self.bus.rack.value):
-          trans.data = self.bus.rdata.value
-          await self.rqueue.put(trans)
+          self._idle_read.set()
+        else:
           self.bus.rreq.value = 0
-          self.bus.raddr.value = 0
-          self._upReadStateMachine = upState.IDLE
-          self._idle_read.set()
-        elif(self.bus.rack.value):
-          trans.data = self.bus.rdata.value
-          await self.rqueue.put(trans)
-          trans = await self.qqueue.get()
 
-      if(self._upReadStateMachine != prevState):
-        self.log.info(f'uP MASTER STATE: {self._upReadStateMachine.name} : BUS READ')
+      if(self._readState != prevState):
+        self.log.info(f'uP MASTER STATE: {self._readState.name} : BUS READ')
 
-      prevState = self._upReadStateMachine
+      prevState = self._readState
 
 # Class: upEchoSlave
 # Respond to master reads and write by returning data, simple echo core.
@@ -233,37 +211,31 @@ class upEchoSlave(upBase):
   # method for write thread
   async def _run_write(self):
     while True:
-      await Edge(self.bus.wreq)
-      self.bus.wack.setimmediatevalue(self.bus.wack.value == self.bus.wreq.value)
-
       await RisingEdge(self.clock)
 
       if(self.bus.wreq.value):
         self.log.info(f'uP SLAVE: REGISTER WRITE')
         self.bus.wack.value = 1
         self._registers[self.bus.waddr.value.integer] = self.bus.wdata.value.integer
-        self._upWriteStateMachine = upState.ACK
+        self._writeState = upState.REQ
       else:
         self.bus.wack.value = 0
         self._idle_write.set()
-        self._upReadStateMachine = upState.IDLE
+        self._readState = upState.IDLE
 
 
   # Method: _run_read
   # method for read thread
   async def _run_read(self):
     while True:
-      await Edge(self.bus.rreq)
-      self.bus.rack.setimmediatevalue(self.bus.rack.value == self.bus.rreq.value)
-
       await RisingEdge(self.clock)
 
       if(self.bus.rreq.value):
         self.log.info(f'uP SLAVE: REGISTER READ')
         self.bus.rack.value = 1
         self.bus.rdata.value = self._registers[self.bus.raddr.value.integer]
-        self._upReadStateMachine = upState.ACK
+        self._readState = upState.REQ
       else:
         self.bus.rack.value = 0
         self._idle_read.set()
-        self._upReadStateMachine = upState.IDLE
+        self._readState = upState.IDLE

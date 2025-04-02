@@ -51,7 +51,6 @@ class uptrans(transaction):
 class upState(enum.IntEnum):
   IDLE = 1
   REQ  = 2
-  ACK  = 3
   ERROR = 99
 
 # Class: upBase
@@ -67,9 +66,9 @@ class upBase(busbase):
 
     super().__init__(entity, name, clock, *args, **kwargs)
 
-    self._upWriteStateMachine = upState.IDLE
+    self._writeState = upState.IDLE
 
-    self._upReadStateMachine = upState.IDLE
+    self._readState = upState.IDLE
 
     self._resetn = resetn
 
@@ -100,7 +99,7 @@ class upBase(busbase):
 
       await RisingEdge(self.clock)
 
-      if self._upWriteStateMachine != upState.IDLE or self._upReadStateMachine != upState.IDLE:
+      if self._writeState != upState.IDLE or self._readState != upState.IDLE:
         self.active = True
       else:
         self.active = False
