@@ -197,8 +197,8 @@ class busbase:
     async def _write(self, trans : transaction):
         if(self._check_type(trans)):
             await self.wqueue.put(trans)
-            await self._idle_write.wait()
             self._idle_write.clear()
+            await self._idle_write.wait()
 
     # Function: _queue_read
     # Setup queue for read requests
