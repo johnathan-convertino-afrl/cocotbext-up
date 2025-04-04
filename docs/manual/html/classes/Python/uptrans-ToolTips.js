@@ -1,1 +1,1 @@
-﻿NDContentPage.OnToolTipsLoaded({17:"<div class=\"NDToolTip TClass LPython\"><div class=\"NDClassPrototype\" id=\"NDClassPrototype17\"><div class=\"CPEntry TClass Current\"><div class=\"CPName\">transaction</div></div></div><div class=\"TTSummary\">Abstract class for transaction types</div></div>"});
+﻿NDContentPage.OnToolTipsLoaded({});

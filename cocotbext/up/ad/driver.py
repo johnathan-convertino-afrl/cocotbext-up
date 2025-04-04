@@ -99,8 +99,6 @@ class upMaster(upBase):
   # Method: _run_write
   # method for write thread
   async def _run_write(self):
-    prevState = self._writeState
-
     while True:
       await RisingEdge(self.clock)
 
@@ -130,16 +128,9 @@ class upMaster(upBase):
         else:
           self.bus.wreq.value = 0
 
-      if(self._writeState != prevState):
-        self.log.info(f'uP MASTER STATE: {self._writeState.name} : BUS WRITE')
-
-      prevState = self._writeState
-
   # Method: _run_read
   # method for read thread
   async def _run_read(self):
-    prevState = self._readState
-
     trans = None
 
     while True:
@@ -170,11 +161,6 @@ class upMaster(upBase):
           self._idle_read.set()
         else:
           self.bus.rreq.value = 0
-
-      if(self._readState != prevState):
-        self.log.info(f'uP MASTER STATE: {self._readState.name} : BUS READ')
-
-      prevState = self._readState
 
 # Class: upEchoSlave
 # Respond to master reads and write by returning data, simple echo core.

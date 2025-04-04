@@ -30,7 +30,9 @@
 
 ### DEPENDENCIES
 #### Build
-  - cocotb (python)
+  - cocotb
+  - cocotb-bus
+  - cocotbext-busbase
 
 ### COMPONENTS
 
@@ -41,7 +43,6 @@
 ```bash
 ├── cocotbext
 │   └── up
-│       ├── busbase.py
 │       ├── ad
 │       │   ├── absbus.py
 │       │   ├── driver.py

@@ -35,7 +35,7 @@ import cocotb
 
 from cocotb.triggers import Timer, RisingEdge
 
-from ..busbase import *
+from cocotbext.busbase import *
 
 import enum
 

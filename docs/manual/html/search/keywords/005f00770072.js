@@ -1,1 +1,0 @@
-﻿NDSearch.OnPrefixDataLoaded("_wr",["Function"],[["_write",,[["busbase",,,,0,"File3:busbase.py:busbase._write","PythonClass:busbase:_write"]]]]);

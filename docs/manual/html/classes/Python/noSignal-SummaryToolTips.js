@@ -1,1 +1,0 @@
-﻿NDSummary.OnToolTipsLoaded("PythonClass:noSignal",{18:"<div class=\"NDToolTip TClass LPython\"><div class=\"NDClassPrototype\" id=\"NDClassPrototype18\"><div class=\"CPEntry TClass Current\"><div class=\"CPName\">noSignal</div></div></div><div class=\"TTSummary\">Class to use when a signal does not exist</div></div>"});

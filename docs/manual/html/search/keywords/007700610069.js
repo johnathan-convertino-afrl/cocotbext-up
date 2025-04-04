@@ -1,1 +1,0 @@
-﻿NDSearch.OnPrefixDataLoaded("wai",["Function"],[["wait",,[["busbase",,,,0,"File3:busbase.py:busbase.wait","PythonClass:busbase:wait"]]]]);
